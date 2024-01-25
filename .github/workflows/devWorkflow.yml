@@ -31,6 +31,9 @@ jobs:
           npm link
         working-directory: generator
 
+      - name: Generate Project
+        run: yo nodejs
+        working-directory: generator
         
 
       
