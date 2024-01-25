@@ -1,0 +1,29 @@
+name: Node Express CI
+run-name: Construyendo ALNITAK
+
+on: 
+  push: 
+    branches: [ develop ]
+
+jobs: 
+  Build: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: 
+          fecht-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 16
+
+      - name: Update npm
+        run: npm install -g npm@latest
+
+        
+
+      
+    
+
