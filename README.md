@@ -1,3 +1,5 @@
+[![Node Express CI](https://github.com/JaredDevAxity/ALNITAK-Test/actions/workflows/devWorkflow.yml/badge.svg)](https://github.com/JaredDevAxity/ALNITAK-Test/actions/workflows/devWorkflow.yml)
+
 # ALNITAK
 
 Proyecto generado para la configuración automática de un microservicio en NodeJs
