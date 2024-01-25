@@ -34,6 +34,15 @@ jobs:
       - name: Generate Project
         run: yo nodejs
         working-directory: generator
+
+      - name: Compile Generated Code
+        run: |
+          npm install
+          npm test
+          npm run coverage
+        working-directory: generator/axity-service
+
+      
         
 
       
