@@ -22,6 +22,14 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
 
+      - name: Install Yeoman
+        run: npm install -g yo generator-code yeoman-generator
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm link
+
         
 
       
