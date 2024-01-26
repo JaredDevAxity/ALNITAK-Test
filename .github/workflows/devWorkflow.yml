@@ -1,55 +1,18 @@
 name: Node Express CI
 run-name: Construyendo ALNITAK
 
-on: 
-  push: 
+on:
+  push:
     branches: [ develop ]
 
-jobs: 
-  Build: 
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout
-        uses: actions/checkout@v3
-        with: 
-          fecht-depth: 0
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with: 
-          node-version: 18
-
-      - name: Update npm
-        run: npm install -g npm@latest
-
-      - name: Install Yeoman
-        run: npm install -g yo generator-code yeoman-generator
-
-      - name: Install Dependencies
-        run: |
-          npm install
-          npm link
-        working-directory: generator
-
-      - name: Generate Project
-        run: yo nodejs
-        working-directory: generator
-
-      - name: Compile Generated Code
-        run: |
-          npm install
-          npm test
-          npm run coverage
-        working-directory: generator/axity-service
-
-      - name: Microsoft Teams Notification
-        uses: jdcargile/ms-teams-notification@v1.3
-        with:
-          github-token: ${{ github.token }} # this will use the runner's token.
-          ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
-          notification-summary: Your custom notification message 
-          notification-color: 17a2b8
-          timezone: America/Denver
+jobs:
+  Build-TITAN:
+    uses: JaredDevAxity/AR_26_A_ARCHERNAR_ACTIONS/.github/workflows/compileALNITAK.yml@main
+    with: 
+      node-version: '18'
+      directory-dependencies: 'generator'
+      name-service: axity
+    secrets: inherit
 
       
         
