@@ -8,7 +8,7 @@ on:
 
 jobs:
   Build-TITAN:
-    uses: JaredDevAxity/AR_26_A_ARCHERNAR_ACTIONS/.github/workflows/compileALTINAK.yml@main
+    uses: JaredDevAxity/AR_26_A_ARCHERNAR_ACTIONS/.github/workflows/compileALNITAK.yml@main
     with: 
       node-version: '18'
       directory-dependencies: generator
