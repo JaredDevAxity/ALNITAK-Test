@@ -3,7 +3,7 @@ run-name: Construyendo ALNITAK
 
 on: 
   push: 
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs: 
   Build: 
